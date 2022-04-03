@@ -6,14 +6,14 @@ import {
   useEffect,
 } from 'react';
 import modelContext from './ModelContext';
-import {
-  DispacherInst,
+import type {
+  DispatcherInst,
   ModelData,
   ModelSelector,
 } from './types';
 
 export default (namespace: string, selector: ModelSelector | undefined) => {
-  const dispatcher = useContext<DispacherInst>(modelContext);
+  const dispatcher = useContext<DispatcherInst>(modelContext);
   const selectorRef = useRef(selector);
   selectorRef.current = selector;
   const [state, setState] = useState(() => (selectorRef.current

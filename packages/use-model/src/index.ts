@@ -6,7 +6,7 @@ export type {
   Model,
   DispatcherCallbacks,
   ModelProviderProp,
-  DispacherInst,
+  DispatcherInst,
   ModelSelector,
   ExecutorProp,
 } from './types';

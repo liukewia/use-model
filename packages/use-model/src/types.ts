@@ -18,7 +18,7 @@ export interface ModelProviderProp {
   children?: React.ReactNode;
 }
 
-export type DispacherInst = InstanceType<typeof Dispatcher>;
+export type DispatcherInst = InstanceType<typeof Dispatcher>;
 
 export type ModelSelector = (data: ModelData) => Partial<ModelData>;
 
