@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "declaration": true,
+    "outDir": "es",
+    "declarationDir": ".",
+    "lib": ["ES5", "ES6", "DOM"]
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    "**/__test__",
+    "test",
+    "docs",
+    "tests"
+  ],
+  "include": ["mock/**/*", "src/**/*", "typings.d.ts"]
+}

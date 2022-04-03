@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true, // 在代码中注入'use strict'
+    "declaration": true, // 生成声明文件，开启后会自动生成声明文件
+    "esModuleInterop": true, // 允许export=导出，由import from 导入
+    "experimentalDecorators": false, // 启用装饰器
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": false, // 通过tslib引入helper函数，文件必须是模块
+    "isolatedModules": true, // 将每个文件做为单独的模块 （与 'ts.transpileModule' 类似）.
+    "jsx": "react-jsx", // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
+    "module": "es6", // 生成代码的模板标准
+    "moduleResolution": "Node", // 模块解析策略，ts默认用node的解析策略，即相对的方式导入
+    "noFallthroughCasesInSwitch": true, // 防止switch语句贯穿(即如果没有break语句后面不会执行)
+    "noImplicitAny": true, // 不允许隐式的any类型
+    "noImplicitThis": true, // 不允许this有隐式的any类型
+    "noUnusedLocals": true, // 检查只声明、未使用的局部变量(只提示不报错)
+    "noUnusedParameters": true, // 检查未使用的函数参数(只提示不报错)
+    "pretty": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true, // 开启所有严格的类型检查
+    "strictNullChecks": true, // 不允许把null、undefined赋值给其他类型的变量
+    "strictPropertyInitialization": true, // 类的实例属性必须初始化
+    "target": "ES5" // 目标语言的版本
+  }
+}
