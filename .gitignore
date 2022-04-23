@@ -42,3 +42,4 @@ yarn-error.log*
 /pnpm-lock.*
 /package-lock.json
 /yarn.lock
+.husky/

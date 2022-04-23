@@ -9,7 +9,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'; // 解析 node_module
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript'; // 让 rollup 认识 ts 的代码
 import clear from 'rollup-plugin-clear';
-import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 const path = require('path');
@@ -51,7 +50,6 @@ export default {
     image(),
     typescript({ tsconfig: './tsconfig.json' }),
     babel({ babelHelpers: 'bundled' }),
-    postcss(),
     alias({
       entries: [
         {
