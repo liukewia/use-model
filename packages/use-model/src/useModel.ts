@@ -12,7 +12,7 @@ import type {
   ModelSelector,
 } from './types';
 
-export default (namespace: string, selector: ModelSelector | undefined) => {
+export default (namespace: string, selector?: ModelSelector) => {
   const dispatcher = useContext<DispatcherInst>(modelContext);
   const selectorRef = useRef(selector);
   selectorRef.current = selector;

@@ -1,54 +1,39 @@
-/* eslint-disable no-plusplus */
-// @ts-nocheck
-import { useModel } from '@liukewia/use-model';
-import React, {
-  useMemo,
-  useEffect,
-} from 'react';
+import useModel from '@liukewia/use-model';
+import React from 'react';
 import './App.css';
-let ids = 0;
-function App(props): React.ReactElement {
-  ids++;
-  console.log('appids:', ids);
+
+function Inside() {
   const {
     user,
     signin,
     signout,
   } = useModel('auth');
 
-  useMemo(() => {
-    console.log('parentmemo1');
-  });
-
-  useEffect(() => {
-    console.log('parentEffectcreate1');
-    return () => {
-      console.log('parentEffectdestore1');
-    };
-  });
-
-  useMemo(() => {
-    console.log('parnetmemo2');
-  });
-
-  useEffect(() => {
-    console.log('parentEffectcreate2');
-    return () => {
-      console.log('parentEffectdestore2');
-    };
-  });
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p
-          onClick={() => {
-            user ? signout() : signin('eric');
-          }}
-        >
-          欢迎{user}来到德莱联盟
-        </p>
-      </header>
+    <div onClick={() => (user ? signout() : signin('eric'))}>
+      {user ? `Logged in as ${user}` : 'Not logged in'}
+    </div>
+  );
+}
+
+function Outside() {
+  return <div>outside</div>;
+}
+
+function App(): React.ReactElement {
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <Inside />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <Outside />
     </div>
   );
 }

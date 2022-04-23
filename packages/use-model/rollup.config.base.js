@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import alias from '@rollup/plugin-alias'; // alias 和 reslove 功能
 import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs'; // cjs => esm
@@ -24,6 +25,7 @@ export default {
       file: pkg.browser,
       format: 'umd',
       name: pkg.name,
+      plugins: [terser()],
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
