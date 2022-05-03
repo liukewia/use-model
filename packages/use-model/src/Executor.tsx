@@ -3,7 +3,7 @@ import React, {
   useEffect,
   useMemo,
 } from 'react';
-import { ExecutorProp } from './types';
+import type { ExecutorProp } from './types';
 
 const Executor = (props: ExecutorProp): React.ReactElement => {
   const {

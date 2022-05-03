@@ -24,6 +24,7 @@ export default {
       file: pkg.browser,
       format: 'umd',
       name: pkg.name,
+      plugins: [terser()],
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',

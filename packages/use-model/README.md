@@ -58,14 +58,22 @@ const appWithModels = withModelProvider(models)(App);
 
 ## 4. 使用 useModel
 
-在函数组件内，引入 useModel 并传入至多两个参数，model 名和 selector，即可使用。例如：
+在函数组件内，引入 useModel 并传入至多两个参数，model 名和 selector，即可使用。
+
+selector 作用是可过滤出部分需要的 model 属性。model 名必需，selector 可选。例如：
 
 ```js
-const { user, signin, signout } = useModel('auth', (model) => ({
+const { user, signin } = useModel('auth', (model) => ({
   user: model.user,
   signin: model.signin,
-  signout: model.signout,
 }));
+```
+
+# Build
+
+```bash
+cd packages/use-model
+pnpm build
 ```
 
 # Publish

@@ -1,4 +1,4 @@
-import {
+import type {
   DispatcherCallbacks,
   ModelData,
 } from './types';
