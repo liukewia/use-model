@@ -21,8 +21,7 @@
   "files": [
     "dist",
     "es",
-    "lib",
-    "README.md"
+    "lib"
   ],
   "homepage": "https://github.com/liukewia/use-model",
   "dependencies": {
